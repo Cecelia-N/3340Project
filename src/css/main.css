@@ -1,0 +1,27 @@
+:root{
+    /* Define Global Colors here */
+    --grey: #DADADA;
+    --main-green:  #96AC51;
+    --olive-green: #70853B;
+    --dark-green:  #32573B;
+    --very-dark-green:  #003B30;
+    --background-grey: #F3F3F3;
+    --light-blue: #A4D8DB;
+    --blue-border: #62BCBE;
+ 
+}
+
+
+
+@font-face {
+    font-family: against_regular;
+    src:url("../fonts/against_regular.ttf"), url("../fonts/against_regular.otf") format("opentype");
+}
+
+body {
+    background: var(--light-blue);
+}
+
+h1 {
+    font-family: against_regular, monsterrat, "arial", sans-serif;
+}
