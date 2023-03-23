@@ -11,10 +11,16 @@
     font-family: against_regular;
     src:url("../fonts/against_regular.ttf"), url("../fonts/against_regular.otf") format("opentype");
 }
-
 body {
-    background: var(--deep-green);
     font-family: 'Red Hat Text', sans-serif;
+}
+
+.home-page {
+    background: var(--deep-green);
+}
+
+.product-page{
+    background: var(--deep-green);
 }
 
 h1 {
