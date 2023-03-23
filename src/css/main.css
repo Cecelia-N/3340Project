@@ -1,13 +1,9 @@
 :root{
     /* Define Global Colors here */
-    --grey: #DADADA;
-    --main-green:  #96AC51;
-    --olive-green: #70853B;
-    --dark-green:  #32573B;
-    --very-dark-green:  #003B30;
-    --background-grey: #F3F3F3;
-    --light-blue: #A4D8DB;
-    --blue-border: #62BCBE;
+    --deep-green: #697429;
+    --light-pink: #E2ADBA;
+    --white: #FFFFFF;
+    --dark-pink: #C34364;
  
 }
 
@@ -17,10 +13,31 @@
 }
 
 body {
-    background: var(--light-blue);
+    background: var(--deep-green);
     font-family: 'Red Hat Text', sans-serif;
 }
 
 h1 {
     font-family: against_regular, monsterrat, "arial", sans-serif;
+    color: var(--light-pink)
+}
+
+.white {
+    color: var(--white);
+}
+
+button {
+    border: none;
+    border-radius: 50px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+
+.btn-pink {
+    background-color: var(--dark-pink);
+    color: var(--white)
 }
