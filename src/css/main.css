@@ -59,7 +59,7 @@ section {
     position: relative;
     display: flex;
     float: left;
-    margin-right: 300px;
+    margin-right: 350px;
     margin-bottom: 500px;
 }
 
@@ -95,6 +95,7 @@ section {
     z-index: 3;
     text-shadow: -1px 2px 2px black;
     text-align: center;
+    white-space: nowrap;
 }
 
 .price {
@@ -114,7 +115,7 @@ button {
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    
+    white-space: nowrap;
 }
 
 .btn-pink {
@@ -132,7 +133,6 @@ button {
 
 
 /* Styles for Carosel/ slideshow */
-* {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
