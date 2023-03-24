@@ -5,26 +5,23 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../static/css/main.css">
     </head>
     <body class="produt-page">
        
         <navbar>
-            <img src="../images/Logo-cropped.png" alt="Potted Paradise" width="250px"/>
+            <img src="../static/images/logo-cropped.png" alt="Potted Paradise" width="250px"/>
             <button class="btn-transparent" onclick="window.location.href='shop.html'">Shop Plants</button>
             <button class="btn-transparent" onclick="window.location.href='shop.html'">Contact Us</button>
 
         </navbar>
 
-        <h1>Plant Title</h1>
-        <p>Item Description</p>
+        <h1>{{ plant["name"] }}</h1>
+        <img src="../static/images/{{type}}.png" alt="Failed to load image">
+        <p>{{ plant["description"] }}</p>
+        <p>{{ plant["price"] }}</p>
+        <p>Sun: {{ plant["care_sunlight"] }}</p>
+        <p>Water: {{ plant["care_water"] }}</p>
 
-        <p>item-price</p>
-        
-        <p>Sun: [sun-care instructions]</p>
-        <p>Water: [sun-care instructions]</p>
-
-
-        
     </body>
 </html>
