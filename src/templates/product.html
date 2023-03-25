@@ -5,25 +5,45 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
 
+        <script src="../static/js/cart.js"></script>
         <link rel="stylesheet" href="../static/css/main.css">
     </head>
-    <body class="produt-page">
+    <body class="product-page">
        
         <navbar>
-            <a href="index.html">
-                <img src="../static/images/logo-cropped.png" alt="Potted Paradise" href="index.html" width="250" />
+            <a href="../../">
+                <img src="../static/images/logo-cropped.png" alt="Potted Paradise" href="../../" width="250" />
             </a>
-            <button class="btn-transparent" onclick="window.location.href='shop.html'">Shop Plants</button>
-            <button class="btn-transparent" onclick="window.location.href='shop.html'">Contact Us</button>
+            <button class="btn-transparent" onclick="window.location.href='/cart/'"> View Cart</button>
+            <button class="btn-transparent" onclick="window.location.href='/shop/'">Shop Plants</button>
+            
 
         </navbar>
 
-        <h1>{{ plant["name"] }}</h1>
+    <section>        <h1>{{ plant["name"] }}</h1>
         <img src="../static/images/{{type}}.png" alt="Failed to load image">
         <p>{{ plant["description"] }}</p>
-        <p>{{ plant["price"] }}</p>
+        <p>${{ plant["price"] }}0</p>
         <p>Sun: {{ plant["care_sunlight"] }}</p>
         <p>Water: {{ plant["care_water"] }}</p>
+
+        <div class="row">
+            <p>Quantity:    </p>
+            <div class="col-md-4" id="product-1">
+            <button class="btn-plus">+</button>
+
+            <input type="number" class="input" value="1" min="1" />
+            
+            <button class="btn-plus">-</button>
+                
+            <div class="block">
+                <a href="product.php?add-to-cart=1" data-id="1" data-quantity="1" class="add-to-cart ajax product-1">Add to Cart</a>
+             <div>
+            </div>
+        </div>
+    </section>
+
+            
 
     </body>
 </html>
