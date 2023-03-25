@@ -1,6 +1,6 @@
 :root{
     /* Define Global Colors here */
-    --deep-green: #697429;
+    --deep-green: #515c00;
     --light-pink: #E2ADBA;
     --white: #FFFFFF;
     --dark-pink: #C34364;
@@ -20,35 +20,43 @@ html {
 }
 body {
     font-family: 'Red Hat Text', sans-serif;
-    background-color: var(--deep-green);
     color: var(--white);
-
-}
-
-.home-page {
-    background: url("../images/background-home.png");
-    background-position: 50%;
-    background-repeat: none;
+    background-repeat: no-repeat;
+    background-position: top left;
     background-color: var(--deep-green);
-
-}
-
-.product-page{
-    background: var(--deep-green);
 }
 
 h1 {
+    display: block;
     font-family: against_regular, monsterrat, "arial", sans-serif;
     color: var(--light-pink);
 }
 
-.home-page > section > h1 {
-    margin-top: 65px;
-    margin-right: 50%;
+/* home page specific styles */
+.home-page {
+    background-image: url("../images/background-home.png");
 }
 
-.home-page > section > p {
-    margin-right: 65%;
+.home-page > section {
+    margin-right: 50%;
+}
+ 
+/* Product page specific styles */
+.product-page {
+    background-image: url("../images/background-product.png");
+}
+
+.product-page > section > h1 {
+    font-size: 40;
+}
+
+.product-page > section {
+    display: block;
+    float: right;
+    text-align: right;
+    margin-top: 50px;
+    margin-left: 60%;
+    margin-right: 30px;
 }
 
 section {
@@ -123,10 +131,40 @@ button {
     color: var(--white)
 }
 
-.btn-transparent {
+
+.btn-plus {
+    border-radius: 60px;
+    padding: 10px 15px;
+    float: right;
+    background-color: var(--light-pink);
+    color: var(--dark-pink);
+    font-weight: bold;
+    margin-right: 40px;
+}
+
+.btn-transparent, input {
     background: none;
     color: var(--white);
     float: right;
     font-size: 1.2em;
     text-shadow: 1px 1px 2px black;
+}
+
+input {
+    display: inline-block;
+    width: 40px;
+    border: none;
+}
+
+.add-to-cart {
+    display: block;
+    float: right;
+    margin-right: 4 0px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: var(--dark-pink);
+    border-radius: 50px;
+    padding: 10px 30;
+
 }
