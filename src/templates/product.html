@@ -7,25 +7,28 @@
 
         <script src="../static/js/cart.js"></script>
         <link rel="stylesheet" href="../static/css/main.css">
+        <style>
+            .product-page {
+                background-image: url("../static/images/custom-divider.png"), url("../static/images/{{img}}.png");
+                background-position: top, bottom left;
+                background-size: auto, 52%;
+            }
+        </style>
     </head>
     <body class="product-page">
        
-        <navbar>
+        <header>
             <a href="../../">
                 <img src="../static/images/logo-cropped.png" alt="Potted Paradise" href="../../" width="250" />
             </a>
             <button class="btn-transparent" onclick="window.location.href='/cart/'"> View Cart</button>
             <button class="btn-transparent" onclick="window.location.href='/shop/'">Shop Plants</button>
-            
-
-        </navbar>
+        </header>
 
     <section>        <h1>{{ plant["name"] }}</h1>
-        <img src="../static/images/{{img}}.png" alt="Failed to load image">
+        <!-- <img src="../static/images/{{img}}.png" alt="Failed to load image"> -->
         <p>{{ plant["description"] }}</p>
         <p>${{ plant["price"] }}0</p>
-        <p>Sun: {{ plant["care_sunlight"] }}</p>
-        <p>Water: {{ plant["care_water"] }}</p>
 
         <div class="row">
             <p>Quantity:    </p>
@@ -41,7 +44,18 @@
              <div>
             </div>
         </div>
+
     </section>
+
+    <aside>
+        <div class="caretips">
+            <h1>Care Tips!</h1>
+            <ul>
+            <li>Sun: {{ plant["care_sunlight"] }}</li>
+            <li>Water: {{ plant["care_water"]}}</li>
+            </ul>
+        </div>
+    </aside>
 
             
 
