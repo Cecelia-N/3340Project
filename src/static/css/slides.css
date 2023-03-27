@@ -13,6 +13,11 @@
   display: none;
 }
 
+.slideshow-container > .mySlides > img {
+  width: 284px;
+  height: 338px;
+}
+
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
