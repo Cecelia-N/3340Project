@@ -65,6 +65,7 @@ h1 {
     margin-right: 54%;
 }
 
+
 .shop {
     background-image: url(../images/background-shop.png);
 }
@@ -78,6 +79,34 @@ h1 {
     margin-right: 30px;
 }
 
+.caretips {
+    background-image: url("../images/care-card.png");
+    background-size: contain;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    position: fixed;
+    bottom: 0;
+}
+
+.caretips > h1 {
+    color: var(--deep-green);
+    font-weight: lighter;
+    position: relative;
+    text-align: left;
+    left: 60px;
+}
+
+.caretips > ul > li {
+    color: black;
+    text-align: left;
+    margin-right: 70%;
+    margin-left: 1%;
+}
+
+.caretips > ul {margin-bottom: 25px;margin-left: 26px;}
+
+/* Product Page specific styles */
 .product-card {
     position: relative;
     display: flex;
@@ -135,35 +164,7 @@ h1 {
     text-shadow: none;
     padding-left: 30px;
 
-}
-
-.caretips {
-    background-image: url("../images/care-card.png");
-    background-size: contain;
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    padding: 50px 0;
-    position: fixed;
-    bottom: 0;
-}
-
-.caretips > h1 {
-    color: var(--deep-green);
-    font-weight: lighter;
-    position: relative;
-    text-align: left;
-    left: 60px;
-}
-
-.caretips > ul > li {
-    color: black;
-    text-align: left;
-    margin-right: 70%;
-    margin-left: 1%;
-}
-
-.caretips > ul {margin-bottom: 25px;margin-left: 26px;}
-       
+}       
 /* Various Button Styles */
      
 button {
