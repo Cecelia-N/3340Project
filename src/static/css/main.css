@@ -1,6 +1,7 @@
 :root{
     /* Define Global Colors here */
     --deep-green: #515c00;
+    --deep-green-transparent: #515c0099;
     --light-pink: #E2ADBA;
     --white: #FFFFFF;
     --dark-pink: #C34364;
@@ -33,11 +34,16 @@ header {
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
+    background-color: var(--deep-green);
 }
 
 section {
     margin-bottom: 50px;
     margin-top: 100px;
+
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    padding: 20px;
 }
 
 
@@ -208,16 +214,9 @@ input {
 
 
 /* Styles for small screens */
-@media screen and (min-width:800px)  {
-    body {
-        background-image: none;
-    }
-
-    .home-page {
-        background-image: none;
-    }
-
-    .home-page > section {
-        margin-right: 0px;
+@media screen and (max-width: 1140px)  {
+    /* remove background when screen is wide enough */
+    .header {
+        background: none;
     }
 }
