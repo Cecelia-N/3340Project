@@ -1,0 +1,68 @@
+.shop {
+    background-image: url(../images/background-shop.png);
+    background-repeat: repeat;
+}
+
+.shop > section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    display: flex;
+    position: relative;
+    margin-bottom: 500px;
+    z-index: 0;
+    width: 375px; /* added */
+    justify-content: center;
+    flex-basis: calc(33.33% - 20px);
+} 
+/* style background image of product card */
+.product-card > img {
+    position: absolute;
+    z-index: 1;
+}
+
+/* style for product image */
+.product-card > img:nth-child(2) {
+    position: absolute;
+    border-radius: 50px;
+    top: 55px;
+    z-index: 2;
+    width: 284px;
+    height: 338;
+    box-shadow: -1px 2px 10px black;
+}
+
+.product-card > button {
+    z-index: 3;
+    position: relative;
+    top: 325;
+    box-shadow: -1px 2px 2px black;
+}
+
+.label {
+    position: absolute;
+    top: 400px;
+    font-size: larger;
+    z-index: 3;
+    text-shadow: -1px 2px 2px black;
+    text-align: center;
+}
+
+.label > p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.price {
+    text-shadow: none;
+}
+
+
+@media (max-width:1025px){
+    .product-card {
+        
+    flex-basis: calc(50% - 10px);
+    }
+}
