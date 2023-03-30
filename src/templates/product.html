@@ -10,8 +10,8 @@
         <style>
             .product-page {
                 background-image: url("../static/images/custom-divider.png"), url("../static/images/{{img}}.png");
-                background-position: top, bottom left;
-                background-size: auto, 52%;
+                background-position: 80%, top left;
+                background-size:cover, 50%;
             }
         </style>
     </head>
@@ -25,35 +25,40 @@
             <button class="btn-transparent" onclick="window.location.href='/shop/'">Shop Plants</button>
         </header>
 
-    <section>        <h1>{{ plant["name"] }}</h1>
-        <!-- <img src="../static/images/{{img}}.png" alt="Failed to load image"> -->
-        <p>{{ plant["description"] }}</p>
-        <p>${{ plant["price"] }}0</p>
+        <section>       
+            <h1>{{ plant["name"] }}</h1>
+            <p>{{ plant["description"] }}</p>
+            <p>${{ plant["price"] }}0</p>
 
-        <div class="row">
-            <p>Quantity:    </p>
-            <div class="col-md-4" id="product-1">
-            <button class="btn-plus">+</button>
+            <div class="row">
+                <div class="quantity">
+                    <p >Quantity:    </p>
+                    <div class="col-md-4" id="product-1">
+                        <button class="btn-plus">+</button>
 
-            <input type="number" class="input" value="1" min="1" />
-            
-            <button class="btn-plus">-</button>
+                        <input type="number" class="input" value="1" min="1" />
+                        
+                        <button class="btn-plus">-</button>
+
                 
-            <div class="block">
-                <a href="product.php?add-to-cart=1" data-id="1" data-quantity="1" class="add-to-cart ajax product-1">Add to Cart</a>
-             <div>
+                            
+                        <div class="block">
+                            <a href="product.php?add-to-cart=1" data-id="1" data-quantity="1" class="add-to-cart ajax product-1">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-    </section>
+        </section>
 
     <aside>
         <div class="caretips">
             <h1>Care Tips!</h1>
             <ul>
-            <li>Sun: {{ plant["care_sunlight"] }}</li>
-            <li>Water: {{ plant["care_water"]}}</li>
+                <li>Sun: {{ plant["care_sunlight"] }}</li>
+                <li>Water: {{ plant["care_water"]}}</li>
             </ul>
+            <img src="../static/images/care-card.png" alt=""s>
         </div>
     </aside>
 
