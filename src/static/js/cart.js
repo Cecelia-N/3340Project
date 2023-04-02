@@ -1,20 +1,13 @@
-$(function() {
-    $(".btn-plus").on("click", function() {
-      var $button = $(this);
-      var $parent = $button.parent(); 
-      var oldValue = $parent.find('.input').val();
-   
-      if ($button.text() == "+") {
-         var newVal = parseFloat(oldValue) + 1;
-       } else {
-          // Don't allow decrementing below zero
-         if (oldValue > 1) {
-           var newVal = parseFloat(oldValue) - 1;
-           } else {
-           newVal = 1;
-         }
-         }
-       $parent.find('a.add-to-cart').attr('data-quantity', newVal);
-       $parent.find('.input').val(newVal);
-    });
+button = document.getElementById("add");
+
+button.addEventListener('click', (e) => {
+    let type = e.target.classList[3]; // type is added to the class list
+    let currentAmount = localStorage.getItem(type);
+    if (currentAmount === null) { //update cart amounts accordingly
+        localStorage.setItem(type, 1);
+    }
+    else {
+        localStorage.setItem(type, (parseInt(currentAmount) + 1));
+    }
+    alert("Added 1 " + type + " to cart");
 });

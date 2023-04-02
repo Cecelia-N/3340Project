@@ -1,9 +1,9 @@
 """Main API routes"""
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, Body
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from database import Database
+from database import Database, name_to_id
 
 app = FastAPI()
 app.mount('/static', StaticFiles(directory="static"), name="static")
@@ -23,29 +23,35 @@ def get_shop(request: Request):
 @app.get('/product/{type}', response_class=HTMLResponse)
 def get_product(request: Request, type: str):
     """Product page"""
-    plant = {}
-    match type:
-        case "echeveria":
-            plant = Database.get_product(1)
-        case "snakeplant":
-            plant = Database.get_product(2)
-        case "moneytree":
-            plant = Database.get_product(3)
-        case "pothos":
-            plant = Database.get_product(4)
-        case "cactus":
-            plant = Database.get_product(5)
-        case "airplant":
-            plant = Database.get_product(6)
-    print(plant)
-    return templates.TemplateResponse("product.html", {"request": request, "img": type, "plant": plant})
+    plant = Database.get_product(name_to_id(type))
+    return templates.TemplateResponse("product.html", {"request": request, "type": type, "plant": plant})
 
-@app.get('/cart/', response_class=HTMLResponse)
+@app.get('/checkout/', response_class=HTMLResponse)
 def get_cart(request: Request):
     """Shop page"""
-    return templates.TemplateResponse("cart.html", {"request": request})
+    return templates.TemplateResponse("checkout.html", {"request": request})
 
 @app.get('/contact/', response_class=HTMLResponse)
 def get_contact(request: Request):
     """Shop page"""
     return templates.TemplateResponse("contact.html", {"request": request})
+
+@app.post('/checkout/')
+async def process_order(request: Request):
+    """Order processing"""
+    body = await request.json()
+    print(f"Order recieved\nName: {body['name']}\nEmail: {body['email']}\nPhone: {body['phone']}")
+    items = {
+        "echeveria": body['echeveria'], 
+        "snakeplant": body['snakeplant'], 
+        "moneytree": body['moneytree'], 
+        "pothos": body['pothos'],
+        "cactus": body['cactus'],
+        "airplant": body['airplant'],
+    }
+    for name, amount_str in items.items():
+        amount = int(amount_str)
+        if amount > 0:
+            print(f"{name}: {amount}")
+            for i in range(0, amount):
+                Database.sell(name_to_id(name))

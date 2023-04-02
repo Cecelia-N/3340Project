@@ -1,6 +1,18 @@
 """Database management"""
 import pymongo
 
+def name_to_id(name):
+    """ID for given plant name"""
+    plants = {
+        "echeveria": 1, 
+        "snakeplant": 2, 
+        "moneytree": 3, 
+        "pothos": 4,
+        "cactus": 5,
+        "airplant": 6,
+    }
+    return plants[name]
+
 class Database:
     """Database containing product data"""
     @classmethod
