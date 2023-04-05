@@ -17,6 +17,7 @@ p {
 
 .field {
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
 }
 
@@ -31,7 +32,6 @@ input {
     border-radius: 15px;
     color: black;
     border: none;
-
 }
 form {
     font-size: 15px; 
