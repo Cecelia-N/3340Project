@@ -5,6 +5,7 @@
     --light-pink: #E2ADBA;
     --white: #FFFFFF;
     --dark-pink: #C34364;
+    --transparent-black: rgba(0,0,0,.5);
  
 }
 /* Global Styles */
@@ -37,6 +38,7 @@ header {
     width: 100%;
     background-color: var(--deep-green);
     z-index: 3;
+    background-color: var(--transparent-black);
 }
 
 section {
@@ -82,11 +84,6 @@ button {
     text-shadow: 1px 1px 2px black;
 }
 
-header > .btn-transparent {
-    background-color: var(--deep-green);
-    border-radius: 0px;
-}
-
 
 
 @media (min-width:320px) { 
@@ -117,8 +114,6 @@ header > .btn-transparent {
 }
 @media (min-width:801px) { 
     /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-    /* home page specific styles */
-    /* hi-res laptops and desktops */ 
     .home-page {
         background-image: url("../images/background-checkout.png");
         background-position: bottom;
