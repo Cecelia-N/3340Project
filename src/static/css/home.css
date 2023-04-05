@@ -25,5 +25,6 @@ section {
         margin-right: 45%;
         margin-bottom: 0; 
         text-align: left;
+        align-items: flex-start;
     }
-}
+} 
