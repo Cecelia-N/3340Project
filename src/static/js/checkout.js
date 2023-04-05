@@ -1,6 +1,6 @@
 function itemHTML(type, amount) { //formatted HTML for an order item
     let price = '$' + (amount * 6).toString() + '.00'
-    return "<div class=\"item\"><p>" + type + " </p>" + amount + "<b>" + price + "</b></p></div>"
+    return "<div class=\"item\"><p>" + type + " </p>, " + amount + "<b>, " + price + "</b></p></div>"
 }
 
 const order = {
