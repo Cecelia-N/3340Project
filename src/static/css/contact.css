@@ -1,76 +1,45 @@
-.z1{
-
+section {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center ;
+    align-items: center;
+    flex-direction: column; 
+    margin: 0;
 }
 
-.a1{
-    margin-top:4%;
-    margin-bottom: -1%;
-    font-size: 60px;
+section > p {
+    margin: 0;
+    font-size: 1em;
+    padding-bottom: .5em;
+    white-space: nowrap;
 }
 
-.a1c1{
-    display:flex;
-    font-size: 15px;
-    margin-bottom: -5%;
-    width:400px;
-    align-items:center;
-    justify-content: center;
-}
-
-.a1c2{
-    
-    display:flex;
-    font-size: 15px;
-    margin-bottom: -5%;
-    align-items:center;
-    justify-content: center;
-    width: 400px;
+section:first-of-type {
+    padding-top: 60px;
     
 }
 
-
-.z2{
-    margin-top: 1%;
-    display: flex;
-    flex-direction: column;
-
+.btn-pink {
+    margin-top: 20px;
 }
 
-.b1{
-    display: flex;
-    flex-direction: row;
-    width:200px;
-    margin-left: 1%;
-}
-
-.b2{
-    display: flex;
-    flex-direction: column;
-    justify-content: justify;
-    align-content: justify;
-    font-size: 13px;
-    margin-right: 3%;
-    margin-left: 35%;
-    margin-top: -23%;
+@media (min-width:320px) { 
+    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
+    .p-logo {
+        display: none;
     }
-
-    .b3{
+}
+@media (min-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */ 
+    .p-logo {
         display: flex;
-        flex-direction: row;
-        margin-right: 2%;
-        justify-content: right;
-        align-content: right;
-        margin-top: -16%;
-        height:275px;
-        width:1275px;
-
+        position: absolute;
     }
     
-.last1{
-   
-        margin-top: 7%;
+    .p-logo:first-of-type {
+        top: 50%;
     }
+    
+    img:last-of-type {
+        right: 0;
+        top: 50%
+    }
+}
