@@ -9,11 +9,16 @@
         
         <link rel="stylesheet" href="../static/css/main.css">
         <style>
-            .product-page {
+
+            @media (min-width:1025px) {
+                .product-page {
                 background-image: url("../static/images/custom-divider.png"), url("../static/images/{{type}}.png");
-                background-position: 80%, top left;
-                background-size:cover, 50%;
+                background-position: 90%, center left;
+                background-attachment: fixed, fixed;
+                background-size:cover, 55%;
+                }    
             }
+            
         </style>
 
         <link rel="stylesheet" href="../static/css/product.css">
@@ -26,31 +31,25 @@
             <button class="btn-transparent" onclick="window.location.href='/checkout/'">View Cart</button>
             <button class="btn-transparent" onclick="window.location.href='/shop/'">Shop Plants</button>
         </header>
-
-        <section>       
+        <section>   
+            <img src="../static/images/{{type}}.png" alt="{{type}}"/>    
             <h1>{{ plant["name"] }}</h1>
             <p>{{ plant["description"] }}</p>
             <p>${{ plant["price"] }}0</p>
 
-            <div class="row">      
-                <div class="block">
-                    <button id="add" type="button" class="add-to-cart ajax product-1 {{type}}">Add to Cart</button>
-                </div>
-                
-                <a href="" data-id="1" data-quantity="1" class="add-to-cart">Add to Cart</a>
+           
+            
+            <button id="add" type="button" class="btn-pink ajax product-1 {{type}}">Add to Cart</button>
+            
         </section>
 
     <aside>
-        <div class="caretips">
             <h1>Care Tips!</h1>
             <ul>
                 <li>Sun: {{ plant["care_sunlight"] }}</li>
                 <li>Water: {{ plant["care_water"]}}</li>
             </ul>
-            <!-- <img src="../static/images/care-card.png" alt=""> -->
-        </div>
     </aside>
-
             
 
     </body>
