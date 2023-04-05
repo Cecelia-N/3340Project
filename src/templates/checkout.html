@@ -9,60 +9,58 @@
     <script src="../static/js/checkout.js" defer></script>
     
     <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="../static/css/product.css">
     <link rel="stylesheet" href="../static/css/checkout.css">
 </head>
 <body class="checkout-page">
    
-    <header>
-        <a href="../../">
-            <img src="../static/images/logo-cropped.png" alt="Potted Paradise" href="../../" width="250" />
-        </a>
-        <button class="btn-transparent" onclick="window.location.href='/checkout/'">View Cart</button>
-        <button class="btn-transparent" onclick="window.location.href='/shop/'">Shop Plants</button>
-    </header>
+        <header>
+            <a href="../../">
+                <img src="../static/images/logo-cropped.png" alt="Potted Paradise" href="../../" width="250" />
+            </a>
+            <button class="btn-transparent" onclick="window.location.href='/checkout/'">View Cart</button>
+            <button class="btn-transparent" onclick="window.location.href='/shop/'">Shop Plants</button>
+        </header>
 
 
-    <div class="div1">
-        <h1 class="div1h1">Checkout</h1>
-        <div>
-            <p class="divp1">Ready to have your very own potted Paradise?</p>
-            <p class="divp2">Here's what you ordered</p>
-        </div>
-       
-    </div>
+        <section class="center">
+            <h1>Checkout</h1>
+            <p>Ready to have your very own potted Paradise?</p>
+            <p>Here's what you ordered</p>
+        </section>
      
     
-    <div class="div2">
-        <div class="div2c1">
-<h1>Your Info</h1>
-<form id="info">
-    <label for="name"> Name:</label>
-    <input class="v1" type="text" id="name" name="name">
-<br><br>
-    <label for="email"> Email:</label>
-    <input class="v1" type="text" id="email" name="email">
-<br><br>
-    <label for="phoneNo."> Phone No.:</label>
-    <input class="v1" type="text" id="phoneNo." name="phoneNo.">
+        <div class="content-wrap">
 
-    </form>
-        </div>
+            <div>       
+                <h1>Your Info</h1>
+                <form id="info">
+                    <div class="field">
+                        <label for="name"> Name:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
 
-        <div class="div2c2">
-            <img src="../static/images/p-logo.png" alt="Logo" >
-        </div>
+                    <div class="field">
+                        <label for="email"> Email:</label>
+                        <input type="text" id="email" name="email">
+                    </div>
 
-        <div class="div2c3">
-            
-        </div>
+                    <div class="field">
+                        <label for="phoneNo."> Phone:</label>
+                        <input type="text" id="phoneNo." name="phoneNo.">
+                    </div>
+                </form>
+            </div>
 
-    </div>    
+            <div class="center">
+                <img src="../static/images/p-logo.png" alt="Logo" >
+                <button type="button" id="submit" class="btn-pink">Purchase!</button>
+            </div>
 
-    <div class="last">
-        <button type="button" id="submit" class="sub" style="margin-left: 45%; background-color: 
-    var(--dark-pink); color:white ;">Purchase!</button>
-    </div>
-    
+            <div class="cart">
+                <h1>Your Order</h1>
+                <div class="invoice"></div>
+            </div>
+        </div>    
+
     </body>
 </html>

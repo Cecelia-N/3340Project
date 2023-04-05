@@ -1,6 +1,6 @@
 function itemHTML(type, amount) { //formatted HTML for an order item
     let price = '$' + (amount * 6).toString() + '.00'
-    return "<div class=\"dp\"><p class=\"dp1\"> " + type + "</p>" + amount + "<b>" + price + "</b></p></div>"
+    return "<div class=\"item\"><p>" + type + " </p>" + amount + "<b>" + price + "</b></p></div>"
 }
 
 const order = {
@@ -15,7 +15,7 @@ const order = {
 /* format order and add it to the page */
 
 let total = 0
-let orderHTML = "<h1 style=\"margin-bottom: -1.5%;\">Your Order</h1>";
+let orderHTML = "";
 
 for (const key in order) { //display order to the user
     if(order[key] != null) {
@@ -24,9 +24,9 @@ for (const key in order) { //display order to the user
     }
 }
 
-orderHTML += "<h2 style=\"margin-left: 55%;\"><b>TOTAL: $" + (total * 6).toString() + ".00</b></h2>";
+orderHTML += "<h2><b>Total: $" + (total * 6).toString() + ".00</b></h2>";
 
-const div = document.getElementsByClassName('div2c3')[0];
+const div = document.getElementsByClassName('invoice')[0];
 div.innerHTML = orderHTML;
 
 /* submission code */
