@@ -40,12 +40,6 @@ header {
     background-color: var(--transparent-black);
 }
 
-section {
-    margin-bottom: 50px;
-    margin-top: 100px;
-}
-
-
 h1 {
     display: flex;
     font-family: against_regular, monsterrat, "arial", sans-serif;
@@ -73,7 +67,6 @@ button {
     color: var(--white);
     font-size: larger;
 }
-
 
 .btn-transparent, input {
     background: none;

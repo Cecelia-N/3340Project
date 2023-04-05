@@ -1,15 +1,16 @@
 .home-page {
     background-image: url("../images/background-checkout.png");
     background-position: bottom;
+    background-attachment: fixed;
 }
-
-.home-page > section {
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 300px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50%;
 }
-
 @media (min-width:320px) { 
     /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
 }
@@ -19,32 +20,28 @@
 
 @media (min-width:600px) { 
     /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+}
 
-}
-@media (min-width:801px) { 
+@media (min-width:800px) { 
     /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-   
-    .home-page > section {
-        margin-right: 0px;
-        text-align: center;
-        margin-bottom: 100px;
-    }
 }
+
+
 @media (min-width:1025px) { 
     /* big landscape tablets, laptops, and desktops */ 
     .home-page {
         background-image: url("../images/background-home.png");
         background-position: top right;
+        background-attachment: local;
+        background-size: 80%;
     }
 
-    .home-page > section {
-        margin-right: 56%; 
+    section {
+        margin-right: 45%;
+        margin-bottom: 0; 
         text-align: left;
     }
-
 }
 @media (min-width:1281px) { 
     /* hi-res laptops and desktops */ 
- 
-
 }
