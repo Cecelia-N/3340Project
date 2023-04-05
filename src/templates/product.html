@@ -8,7 +8,6 @@
         <script src="../static/js/cart.js" defer></script>
         
         <link rel="stylesheet" href="../static/css/main.css">
-        <link rel="stylesheet" href="../static/css/product.css">
         <style>
             .product-page {
                 background-image: url("../static/images/custom-divider.png"), url("../static/images/{{type}}.png");
@@ -16,6 +15,8 @@
                 background-size:cover, 50%;
             }
         </style>
+
+        <link rel="stylesheet" href="../static/css/product.css">
     </head>
     <body class="product-page">
         <header>
@@ -35,8 +36,8 @@
                 <div class="block">
                     <button id="add" type="button" class="add-to-cart ajax product-1 {{type}}">Add to Cart</button>
                 </div>
-            </div>
-
+                
+                <a href="" data-id="1" data-quantity="1" class="add-to-cart">Add to Cart</a>
         </section>
 
     <aside>
@@ -46,7 +47,7 @@
                 <li>Sun: {{ plant["care_sunlight"] }}</li>
                 <li>Water: {{ plant["care_water"]}}</li>
             </ul>
-            <img src="../static/images/care-card.png" alt=""s>
+            <!-- <img src="../static/images/care-card.png" alt=""> -->
         </div>
     </aside>
 

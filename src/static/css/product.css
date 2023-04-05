@@ -1,32 +1,34 @@
 /* Product page specific styles */
 .product-page > section {
     display: flex;
-    float: right;
+    /* float: right; */
     text-align: right;
     margin-left: 60%;
     margin-right: 30px;
     flex-direction: column;
+    font-size: .8em
 }
-
+/* 
 .caretips {
-    position:absolute;
+    position: fixed;
     bottom: 0;
     left: 20px;
-    width: 400px;
-    font-size: smaller;
-}
+    width: 35%;
+    height:20%;
+    font-size: .5em;
+} */
 
 .caretips > img {
     position: absolute;
     bottom: 0;
-    width: 600px;
-    height: 434px;
+    width: 100%;
+    height: 150%;
     z-index: -1;
 }
 
 .caretips > h1 {
     color: var(--deep-green);
-    font-size: 40px;
+    font-size: 2em;
     white-space: nowrap;
     position:relative;
     left: 139px;
@@ -35,10 +37,11 @@
 }
 .caretips > ul {
     position:relative;
-    width: 500px;
-    margin-bottom:80px;
-    margin-top: 0;
+    width: 80%;
+    /* margin-bottom:60px; */
+    /* margin-top: 0; */
     left: 30px;
+    bottom: 20px;
 }
 .caretips > ul > li {
     list-style-image: url('../images/rain.png');
@@ -61,7 +64,7 @@
     margin: 0;
 }
 .btn-plus {
-    border-radius: 60px;
+    border-radius: 70px;
     padding: 10px 15px;
     float: right;
     background-color: var(--light-pink);
@@ -70,25 +73,68 @@
     font-size: large;
     margin-right: 40px;
     display: flex;
+    align-self: flex-end;
     flex-direction: row;
-    flex-wrap: nowrap;
+}
+input {
+    width: 70px;
+    border: none;
 }
 
 .add-to-cart {
-    display: block;
-    float: right;
-    margin-right: 4 0px;
+    display: flex;
+    align-self: flex-end;
     margin-top: 20px;
     text-decoration: none;
     color: white;
     background-color: var(--dark-pink);
     border-radius: 50px;
     padding: 10px 30;
-
 }
 
-input {
-    display: inline-flex;
-    width: 70px;
-    border: none;
+aside {
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    width: 35%;
+    min-height: 411px;
+    height:20%;
+    font-size: .5em;
+
+    background-image: url("../images/care-card.png");
+    background-size:100%;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+/* 
+@media (min-width:320px) { 
+    smartphones, portrait iPhone, portrait 480x320 phones (Android) 
+    .product-page {
+        background-image: none;
+    }
+    .product-page > section {
+        float: left;
+        margin-left: 20px;
+    }
+    .product-page > section > h1 {
+        align-self: flex-start;
+    }
+
+
+} */
+@media (min-width:480px) {
+     /* smartphones, Android phones, landscape iPhone */
+}
+@media (min-width:600px) { 
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */ 
+}
+@media (min-width:801px) { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+}
+@media (min-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */ 
+}
+@media (min-width:1281px) { 
+    /* hi-res laptops and desktops */ 
 }
