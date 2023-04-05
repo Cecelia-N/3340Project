@@ -2,11 +2,12 @@
     background-image: url(../images/background-shop.png);
     background-repeat: repeat;
 }
-
-.shop > section {
+section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    margin-top: 100px;
 }
 
 .product-card {
